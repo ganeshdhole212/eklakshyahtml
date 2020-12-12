@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        usernames = ['ganesh','suresh','sonu','akash','akshay']
+        uname = prompt('enter user name')
+        x=parseInt(uname)
+        function validationUser() {
+       
+        for (key in usernames) {
+                   
+        if(uname==x)
+        {
+            document.getElementById('mydiv').innerHTML ="Please enter an name" ;
+                    break;
+        }
+
+        else if (usernames[key] == uname)
+        {
+        document.getElementById('mydiv').innerHTML ='Username already exists';
+                    break;
+         }
+
+         if (usernames[key] != uname) 
+         {
+             document.getElementById('mydiv').innerHTML ='Registered successfully';
+         }
+            }
+
+        }
+    </script>
+    <style>
+        input{
+            font-size: 50px;
+
+          }
+        div{
+            text-align: center;
+        }
+        #div1{
+            font-size: 70px;
+            text-align: center;
+            font-style: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="click me" id="username" onclick="validationUser()">
+    <br>
+    <br><br><br>
+    <div id="mydiv" style="color: blue; font-style: bold;font-size: 70px;"></div>
+</body>
+
+</html>
